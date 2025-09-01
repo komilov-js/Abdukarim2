@@ -393,7 +393,7 @@ a:hover {
 .image-modal img {
     position: relative;
     z-index: 9999;
-    top: 25%;
+    top: 15%;
     /* left: 1%; */
     /* transform: (50% 50%); */
     margin: auto;

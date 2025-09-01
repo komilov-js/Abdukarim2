@@ -1,0 +1,556 @@
+/* Base styles - these are already in your code, but I've kept them for context */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cinzel', serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ================== Page 1 ================== */
+.page1 {
+    background-attachment: fixed;
+    width: 100%;
+    height: 110%;
+    background: url(https://cdna.artstation.com/p/assets/images/images/020/387/944/large/veer-design-bugchironrqweb.jpg?1567587797);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; /* ✅ qo'shildi */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.text {
+    color: rgb(239, 237, 237) !important;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 700px;
+    padding: 20px;
+}
+
+.text h1 {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.text h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.text p {
+    font-size: 20px !important;
+}
+
+p {
+    font-size: 20px;
+}
+
+.logo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    transition: 0.3s ease;
+    border: 2px solid #cfa958;
+    box-shadow: 0 0 20px rgba(207, 169, 88, 0.5);
+    padding: 10px;
+}
+
+.logo img:hover {
+    rotate: 360deg;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.container1 {
+    position: relative;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap; /* Added for responsiveness */
+}
+
+.links a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-radius: 30px;
+    transition: 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap; /* Prevents text from wrapping */
+}
+
+.links a:hover {
+    background: white;
+    color: black;
+    transform: scale(1.01);
+    box-shadow: 0 0 15px white;
+}
+
+/* ================== Page 2 ================== */
+.page2 {
+    width: 100%;
+    min-height: 80vh;
+    background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+    background-repeat: no-repeat; /* ✅ qo'shildi */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    font-size: 20px;
+    color: #cfa958;
+    gap: 50px;
+    position: relative;
+}
+
+.aa {
+    display: flex;
+    gap: 100px;
+    position: relative;
+    flex-direction: row; /* Default desktop layout */
+}
+
+.aa::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background: linear-gradient(to bottom, transparent, #cfa958, transparent);
+}
+
+.container2 {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    max-width: 500px;
+    gap: 30px;
+    line-height: 1.6;
+    animation: fadeInUp 1s ease both;
+}
+
+.container2 h2 {
+    font-size: 35px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #d4af37;
+}
+
+.container2 p {
+    font-size: 22px;
+    color: #e1c78f;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================== Page 3 ================== */
+.page3 {
+    background-image: url(./imgs/page3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; /* ✅ bor edi */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 35px;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.container3 {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 700px;
+    row-gap: 50px;
+    padding: 20px;
+}
+
+.container3 div {
+    margin: 50px 0;
+}
+
+/* ================== Page 4 ================== */
+.page4 {
+    background-color: #111;
+    background-repeat: no-repeat; /* ✅ qo'shildi */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 50px 20px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.container4 div {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    min-width: 300px;
+    color: #cfa958;
+}
+
+.container4 h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.container4 p,
+.container4 li {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.container4 ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.container4 img {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px;
+    border-radius: 8px;
+    display: block;
+}
+
+.yama {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.yama div {
+    display: flex;
+    flex-direction: column;
+}
+
+.yama div img {
+    width: 100%;
+    max-width: 300px;
+    object-fit: cover;
+    height: 300px;
+}
+
+#yama {
+    position: relative;
+    top: 10px;
+}
+
+/* ================== Footer ================== */
+footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 60vh;
+    position: relative;
+    background-image: url(./imgs/footer.jpg);
+    background-size: cover;
+    background-repeat: no-repeat; /* ✅ bor edi */
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+}
+
+.texts {
+    color: white;
+    font-size: 20px;
+    gap: 50px;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    padding: 20px;
+    text-align: center;
+}
+
+.container-footer {
+    position: relative;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.texts div {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    gap: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-radius: 30px;
+    transition: 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+a:hover {
+    background: white;
+    color: black;
+    transform: scale(1.01);
+    box-shadow: 0 0 15px white;
+}
+
+/* ================== Image Modal ================== */
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+}
+
+.image-modal img {
+    margin: auto;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #000;
+}
+
+.image-modal .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.image-modal .close:hover {
+    color: #cfa958;
+}
+
+/* ================== Media Queries ================== */
+
+/* General Mobile Styles (up to 768px) */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+    .page1 img{
+        background-repeat: no-repeat;
+    }
+
+    /* Page 1 adjustments */
+    .page1 .text h1 {
+        font-size: 28px;
+    }
+
+    .page1 .text h2 {
+        font-size: 30px;
+    }
+
+    .page1 .text p {
+        font-size: 16px !important;
+    }
+
+    .links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .links a {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    /* Page 2 adjustments */
+    .aa {
+        flex-direction: column;
+        gap: 30px;
+        padding: 0;
+    }
+
+    .aa::before {
+        display: none;
+    }
+
+    .container2 {
+        max-width: 100%;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .container2 h2 {
+        font-size: 28px;
+    }
+
+    .container2 p {
+        font-size: 18px;
+    }
+
+    /* Page 3 adjustments */
+    .page3 {
+        height: auto;
+        min-height: 80vh;
+        padding: 40px 20px;
+    }
+    
+    .container3 h1 {
+        font-size: 28px;
+    }
+
+    /* Page 4 adjustments */
+    .container4 {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .container4 div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 100%;
+    }
+
+    .yama {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .yama div img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* Footer adjustments */
+    footer {
+        height: auto;
+        padding: 50px 20px;
+    }
+
+    .container-footer {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .texts div {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .texts a {
+        font-size: 16px;
+    }
+    
+    /* Image modal adjustments */
+    .image-modal img {
+        width: 90%;
+    }
+    
+}
+
+/* Tablet Styles (769px to 1024px) */
+@media (max-width: 1024px) {
+    /* Page 1 */
+    .links {
+        gap: 20px;
+    }
+    
+    .logo img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    /* Page 4 */
+    .container4 {
+        gap: 30px;
+    }
+    
+    .yama {
+        gap: 10px;
+    }
+    
+    .yama div img {
+        width: 250px;
+        height: 250px;
+    }
+}

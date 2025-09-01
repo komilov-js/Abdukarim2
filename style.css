@@ -411,6 +411,7 @@ a:hover {
 @media (max-width: 768px) {
     body {
         font-size: 16px;
+        overflow-x:hidden ;
     }
     .page1 img{
         background-repeat: no-repeat;

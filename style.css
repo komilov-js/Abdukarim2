@@ -20,7 +20,7 @@ body {
     background: url(https://cdna.artstation.com/p/assets/images/images/020/387/944/large/veer-design-bugchironrqweb.jpg?1567587797);
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat; /* ✅ qo'shildi */
+    background-repeat: no-repeat;
     position: relative;
     display: flex;
     justify-content: center;
@@ -90,7 +90,7 @@ p {
     align-items: center;
     gap: 40px;
     justify-content: center;
-    flex-wrap: wrap; /* Added for responsiveness */
+    flex-wrap: wrap;
 }
 
 .links a {
@@ -105,7 +105,7 @@ p {
     display: flex;
     align-items: center;
     gap: 10px;
-    white-space: nowrap; /* Prevents text from wrapping */
+    white-space: nowrap;
 }
 
 .links a:hover {
@@ -120,7 +120,7 @@ p {
     width: 100%;
     min-height: 80vh;
     background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
-    background-repeat: no-repeat; /* ✅ qo'shildi */
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -137,7 +137,7 @@ p {
     display: flex;
     gap: 100px;
     position: relative;
-    flex-direction: row; /* Default desktop layout */
+    flex-direction: row;
 }
 
 .aa::before {
@@ -188,7 +188,7 @@ p {
     background-image: url(./imgs/page3.jpg);
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat; /* ✅ bor edi */
+    background-repeat: no-repeat;
     position: relative;
     display: flex;
     justify-content: center;
@@ -218,7 +218,7 @@ p {
 /* ================== Page 4 ================== */
 .page4 {
     background-color: #111;
-    background-repeat: no-repeat; /* ✅ qo'shildi */
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -232,17 +232,11 @@ p {
 
 .container4 {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
     gap: 40px;
     flex-wrap: wrap;
-}
-
-.container4 div {
-    display: flex;
-    flex-wrap: wrap;
-    flex: 1;
-    min-width: 300px;
     color: #cfa958;
 }
 
@@ -274,6 +268,7 @@ p {
 .yama {
     display: flex;
     gap: 20px;
+    align-items: center;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -281,6 +276,7 @@ p {
 .yama div {
     display: flex;
     flex-direction: column;
+    gap: 15px;
 }
 
 .yama div img {
@@ -288,11 +284,23 @@ p {
     max-width: 300px;
     object-fit: cover;
     height: 300px;
+    border-radius: 8px;
 }
 
-#yama {
-    position: relative;
-    top: 10px;
+.gg {
+    display: flex;
+    align-items: center;
+    gap: 20px !important;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.nmadur {
+    display: flex;
+    gap: 290px;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 /* ================== Footer ================== */
@@ -304,7 +312,7 @@ footer {
     position: relative;
     background-image: url(./imgs/footer.jpg);
     background-size: cover;
-    background-repeat: no-repeat; /* ✅ bor edi */
+    background-repeat: no-repeat;
     background-position: center;
     align-items: center;
     justify-content: center;
@@ -342,7 +350,6 @@ footer {
 
 .texts div {
     display: flex;
-    /* flex-direction: column; */
     align-items: center;
     gap: 20px;
 }
@@ -406,18 +413,12 @@ a:hover {
 }
 
 /* ================== Media Queries ================== */
-
-/* General Mobile Styles (up to 768px) */
 @media (max-width: 768px) {
     body {
         font-size: 16px;
-        overflow-x:hidden ;
-    }
-    .page1 img{
-        background-repeat: no-repeat;
+        overflow-x: hidden;
     }
 
-    /* Page 1 adjustments */
     .page1 .text h1 {
         font-size: 28px;
     }
@@ -440,7 +441,6 @@ a:hover {
         padding: 8px 16px;
     }
 
-    /* Page 2 adjustments */
     .aa {
         flex-direction: column;
         gap: 30px;
@@ -465,29 +465,34 @@ a:hover {
         font-size: 18px;
     }
 
-    /* Page 3 adjustments */
     .page3 {
         height: auto;
         min-height: 80vh;
         padding: 40px 20px;
     }
-    
+
     .container3 h1 {
         font-size: 28px;
     }
 
-    /* Page 4 adjustments */
+    /* Page 4 */
     .container4 {
         flex-direction: column;
         gap: 20px;
         text-align: center;
-    }
-    
-    .container4 div {
-        display: flex;
         align-items: center;
-        justify-content: center;
-        min-width: 100%;
+    }
+
+    .nmadur {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .gg {
+        flex-direction: column;
+        gap: 20px !important;
     }
 
     .yama {
@@ -500,8 +505,16 @@ a:hover {
         max-width: 100%;
         height: auto;
     }
-    
-    /* Footer adjustments */
+
+    .container4 h1 {
+        font-size: 24px;
+    }
+
+    .container4 p,
+    .container4 li {
+        font-size: 16px;
+    }
+
     footer {
         height: auto;
         padding: 50px 20px;
@@ -512,46 +525,50 @@ a:hover {
         gap: 20px;
         text-align: center;
     }
-    
+
     .texts div {
         flex-direction: column;
         gap: 15px;
     }
-    
+
     .texts a {
         font-size: 16px;
     }
-    
-    /* Image modal adjustments */
+
     .image-modal img {
         width: 90%;
     }
-    
 }
 
-/* Tablet Styles (769px to 1024px) */
 @media (max-width: 1024px) {
-    /* Page 1 */
     .links {
         gap: 20px;
     }
-    
+
     .logo img {
         width: 120px;
         height: 120px;
     }
-    
-    /* Page 4 */
+
     .container4 {
         gap: 30px;
     }
-    
-    .yama {
-        gap: 10px;
+
+    .nmadur {
+        gap: 100px;
+        justify-content: center;
     }
-    
+
+    .yama {
+        gap: 15px;
+    }
+
     .yama div img {
         width: 250px;
         height: 250px;
+    }
+
+    .container4 h1 {
+        font-size: 26px;
     }
 }
